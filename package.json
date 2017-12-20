@@ -4,11 +4,13 @@
   "description": "Natours website landing page",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css --watch"
+    "compile:sass": "node-sass sass/main.scss css/style.css --watch",
+    "serve": "live-server"
   },
   "author": "Bruno Lombardi",
   "license": "ISC",
   "devDependencies": {
+    "live-server": "^1.2.0",
     "node-sass": "^4.7.2"
   }
 }
