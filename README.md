@@ -3,11 +3,19 @@ Natours is a ficticious website of an nature tours agency. The website uses a lo
 
 ![Natours website](https://image.prntscr.com/image/JsplUNe_TfKsiWIJyDGB_w.png)
 
-## Tools used
-### SASS for compiling CSS
-The sass compiler used is node-sass. To run it do the following:
+## Getting ready for development
+### Fork the project and do the following
+To start the development, you need to uncomment line 10 in index.html file. This way the linea.css file will load. Now, make sure you have [npm](https://www.npmjs.com/) properly installed in your system.
+Then, just run these from your terminal:
 ```
 npm install
-npm run compile:sass
+npm run start
 ```
-This will compile the sass code in the `css/style.css` file.
+These commands will start the development server and watch for changes in the sass code, compile it and show the results instantly in the browser.
+
+## Compiling for production
+Now you should comment that line 10 in index.html file, as for production we will concat all the css in one file.
+Then, just run:
+```
+npm run build:css
+```

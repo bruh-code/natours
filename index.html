@@ -7,7 +7,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/linea.css">
+  <!--<link rel="stylesheet" href="css/linea.css">-->
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
@@ -27,11 +27,11 @@
 
     <nav class="navigation__nav">
       <ul class="navigation__list">
-        <li class="navigation__item"><a href="#" class="navigation__link">About Natours</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link">Your benefits</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link">Popular tours</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link">Book now</a></li>
+        <li class="navigation__item"><a href="#section-about" onclick="closeNav()" class="navigation__link">About Natours</a></li>
+        <li class="navigation__item"><a href="#section-features" onclick="closeNav()" class="navigation__link">Your benefits</a></li>
+        <li class="navigation__item"><a href="#section-tours" onclick="closeNav()" class="navigation__link">Popular tours</a></li>
+        <li class="navigation__item"><a href="#section-stories" onclick="closeNav()" class="navigation__link">Stories</a></li>
+        <li class="navigation__item"><a href="#section-book" onclick="closeNav()" class="navigation__link">Book now</a></li>
       </ul>
     </nav>
   </div>
@@ -52,7 +52,7 @@
   </header>
 
   <main>
-    <section class="section-about">
+    <section class="section-about" id="section-about">
       <div class="u-center-text u-margin-bottom-big">
         <h2 class="heading-secondary">
           Exciting tours for adventurous people
@@ -78,15 +78,20 @@
         </div>
         <div class="col-1-of-2">
           <div class="composition">
-            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+
+            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" alt="Photo 1" sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" class="composition__photo composition__photo--p1" src="img/nat-1-large.jpg">
+            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" alt="Photo 2" sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" class="composition__photo composition__photo--p2" src="img/nat-2-large.jpg">
+            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" alt="Photo 3" sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" class="composition__photo composition__photo--p3" src="img/nat-3-large.jpg">
+
+            <!--<img src="img/nat-1-large.jpg" alt="" class="composition__photo composition__photo--p1">
             <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">-->
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-features">
+    <section class="section-features" id="section-features">
 
       <div class="row">
         <div class="col-1-of-4">
@@ -244,7 +249,7 @@
       </div>
     </section>
 
-    <section class="section-stories">
+    <section class="section-stories" id="section-stories">
       <div class="bg-video">
         <video class="bg-video__content" autoplay muted loop>
           <source src="img/video.mp4" type="video/mp4">
@@ -265,7 +270,7 @@
           </figure>
           <div class="story__text">
             <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family</h3>
-            <p>Ad ea nulla mollit quis adipisicing nostrud sint veniam anim cupidatat incididunt amet. Sint id ullamco qui exercitation pariatur reprehenderit amet quis enim nulla. Aliqua minim nulla minim dolor cillum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur. Ad ea nulla mollit quis adipisicing nostrud sint veniam anim cupidatat incididunt amet. Sint id ullamco qui exercitation pariatur reprehenderit amet quis enim nulla. Aliqua minim nulla minim dolor cillum.</p>
           </div>
         </div>
       </div>
@@ -280,7 +285,8 @@
           </figure>
           <div class="story__text">
             <h3 class="heading-tertiary u-margin-bottom-small">My life is better now!</h3>
-            <p>Ad ea nulla mollit quis adipisicing nostrud sint veniam anim cupidatat incididunt amet. Sint id ullamco qui exercitation pariatur reprehenderit amet quis enim nulla. Aliqua minim nulla minim dolor cillum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, aperiam! Ad ea nulla mollit quis adipisicing nostrud sint veniam anim cupidatat incididunt amet. Sint id ullamco qui exercitation pariatur reprehenderit amet quis enim nulla.
+              Aliqua minim nulla minim dolor cillum.</p>
           </div>
         </div>
       </div>
@@ -290,7 +296,7 @@
       </div>
     </section>
 
-    <section class="section-book">
+    <section class="section-book" id="section-book">
       <div class="row">
         <div class="book">
           <div class="book__form">
@@ -340,7 +346,12 @@
 
   <footer class="footer">
     <div class="footer__logo-box">
-      <img src="img/logo-green-2x.png" alt="Full Logo" class="footer__logo">
+
+      <picture class="footer__logo">
+        <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+        <img src="img/logo-green-2x.png" srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full Logo" class="footer__logo">
+      </picture>
+
     </div>
     <div class="row">
       <div class="col-1-of-2">
@@ -359,30 +370,30 @@
           Built by <a href="#" class="footer__link">Bruno Lombardi</a> Copyright &copy; 2018.
         </p>
         <p class="footer__copyright">
-          Design by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#" class="footer__link">Advanced CSS and Sass</a>.
+          Design by <a href="https://www.udemy.com/user/jonasschmedtmann/" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="https://www.udemy.com/advanced-css-and-sass/" class="footer__link">Advanced CSS and Sass</a>.
         </p>
       </div>
     </div>
   </footer>
 
 
-<div class="popup" id="popup">
-  <div class="popup__content">
-    <div class="popup__left">
-      <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
-      <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
-    </div>
-    <div class="popup__right">
-      <a href="#section-tours" class="popup__close">&times;</a>
-      <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
-      <h3 class="heading-tertiary u-margin-bottom-medium">Important &ndash; Please read this terms before booking</h3>
-      <p class="popup__text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ab autem obcaecati eligendi, doloribus hic dolores, odit, culpa necessitatibus aliquid maiores amet. Dolor accusamus maiores dolore sed voluptatem, qui doloremque.
-      </p>
-      <a href="#" class="btn btn--green">Book now</a>
+  <div class="popup" id="popup">
+    <div class="popup__content">
+      <div class="popup__left">
+        <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+        <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+      </div>
+      <div class="popup__right">
+        <a href="#section-tours" class="popup__close">&times;</a>
+        <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+        <h3 class="heading-tertiary u-margin-bottom-medium">Important &ndash; Please read this terms before booking</h3>
+        <p class="popup__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ab autem obcaecati eligendi, doloribus hic dolores, odit, culpa necessitatibus aliquid maiores amet. Dolor accusamus maiores dolore sed voluptatem, qui doloremque.
+        </p>
+        <a href="#" class="btn btn--green">Book now</a>
+      </div>
     </div>
   </div>
-</div>
   <!-- <section class="grid-test">
     <div class="row">
       <div class="col-1-of-2">
@@ -450,7 +461,20 @@
       </div>
     </div>
   </section> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
+  <script>
+    function closeNav() {
+      console.log('closeNav');
+      $('#navi-toggle').prop('checked', false);
+    }
 
+    $('a[href*=\\#]').click(function(event) {
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+      }, 1000);
+    });
+
+  </script>
 </body>
 
 </html>
