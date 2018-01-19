@@ -9,8 +9,27 @@
 html {
   // 1rem definition
   font-size: 62.5%;
+
+  // Organize the media queries from lower to higher screen size
+
+  @include respond(tab-land) { // width < 1200?
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) { // width < 900?
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) { // width > 1800?
+    font-size: 75%;
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) { // width < 900?
+    padding: 0;
+  }
 }

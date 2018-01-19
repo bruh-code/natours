@@ -41,3 +41,25 @@
     transform: translateY(0);
   }
 }
+
+@keyframes movingBackAndForth {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(0);
+  }
+
+  40% {
+    transform: translateX(-50%);
+  }
+
+  80% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
