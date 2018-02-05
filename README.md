@@ -1,5 +1,5 @@
 # Natours front-end web development project
-Natours is a ficticious website of an nature tours agency. The website uses a lot of advanced CSS, and it has been well designed by Jonas Schmedtmann, the author of [advanced CSS course](https://www.udemy.com/advanced-css-and-sass/), this project is part of this course.
+Natours is a ficticious website of an nature tours agency. The website uses a lot of advanced CSS, and it has been well designed by Jonas Schmedtmann, the author of [advanced CSS course](https://www.udemy.com/advanced-css-and-sass/), this project is part of this course. See it [live here](https://bruno-lombardi.github.io/natours/), powered by Github Pages.
 
 ![Natours website](https://image.prntscr.com/image/JsplUNe_TfKsiWIJyDGB_w.png)
 
